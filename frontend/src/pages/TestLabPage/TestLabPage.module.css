@@ -1,0 +1,153 @@
+/* Container and Layout */
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  background-color: var(--bg-main);
+}
+
+.topRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+/* Status Insight Box */
+.statusBox {
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #ffffff;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.statusTitle { 
+  font-weight: 800; 
+  font-size: 14px; 
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.statusBody { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 8px; 
+}
+
+.why { 
+  color: var(--muted); 
+  font-size: 13px; 
+  line-height: 1.5; 
+}
+
+/* --- NEW STACKED ALIGNMENT --- */
+.stackedLayout {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.editorPane, .timelinePane {
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #ffffff;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+  width: 100%; /* Ensures boxes take full width */
+}
+
+.paneTitle { 
+  font-weight: 800; 
+  font-size: 15px;
+  color: var(--text-primary);
+}
+
+/* Editor Styling - Height adjusted for top box */
+.editor {
+  margin-top: 14px;
+  width: 100%;
+  min-height: 250px;
+  resize: vertical;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #f8fafc;
+  padding: 16px;
+  font-family: var(--mono);
+  font-size: 13px;
+  line-height: 1.6;
+  color: #1e293b;
+}
+
+/* --- Live Database Table Alignment Fixes --- */
+.tableWrapper {
+  overflow-x: auto;
+  margin-top: 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  max-height: 500px;
+  background: #ffffff;
+}
+
+.liveTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px;
+  table-layout: auto;
+}
+
+.liveTable th {
+  background: #f1f5f9;
+  padding: 12px 16px;
+  text-align: left; /* Strict left alignment */
+  color: #475569;
+  font-weight: 700;
+  border-bottom: 2px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  white-space: nowrap;
+}
+
+.liveTable td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f1f5f9;
+  color: #334155;
+  white-space: nowrap;
+  text-align: left; /* Strict left alignment */
+}
+
+.liveTable tr:hover td {
+  background-color: #f8fafc;
+}
+
+.liveMatchesContainer {
+  margin-top: 8px;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.matchBadgeRow {
+  margin-bottom: 16px;
+}
+
+.emptySnap, .noData {
+  padding: 32px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+  background: #f8fafc;
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}

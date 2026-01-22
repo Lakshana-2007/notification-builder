@@ -1,0 +1,56 @@
+.stepper{
+  list-style: none;
+  padding: 0;
+  margin: 0 0 14px 0;
+  display:grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.step{
+  display:flex;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: #f8fafc;
+}
+
+.dot{
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight: 900;
+  flex: 0 0 auto;
+  border: 1px solid var(--border2);
+  background: var(--panel);
+}
+
+.label{ font-weight: 900; font-size: 13px; }
+.hint{ margin-top: 3px; font-size: 12px; color: var(--muted); }
+
+.active{
+  border-color: color-mix(in srgb, var(--accent) 25%, var(--border));
+  background: #eef2ff;
+}
+.active .dot{
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--border2));
+}
+
+.done{
+  border-color: color-mix(in srgb, var(--good) 25%, var(--border));
+  background: color-mix(in srgb, var(--good) 10%, white);
+}
+.done .dot{
+  background: color-mix(in srgb, var(--good) 12%, white);
+  border-color: color-mix(in srgb, var(--good) 25%, var(--border2));
+  color: var(--good);
+}
+
+@media (max-width: 860px){
+  .stepper{ grid-template-columns: 1fr; }
+}
+

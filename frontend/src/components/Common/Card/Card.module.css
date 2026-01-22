@@ -1,0 +1,28 @@
+.card{
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px;
+}
+
+.header{
+  display:flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 12px;
+}
+.title{
+  font-weight: 900;
+  letter-spacing: -0.2px;
+}
+.subtitle{
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.actions{ display:flex; align-items:center; gap: 10px; }
+
